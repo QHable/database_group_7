@@ -1,4 +1,4 @@
--- Product Table
+-- Product Table made with dbschema
 INSERT INTO group_7.products( id, product_name, product_price, product_category, product_description ) VALUES ( 'm5317269', 'Adsapommanor', 159, 'Reptile', 'heart medication');
 INSERT INTO group_7.products( id, product_name, product_price, product_category, product_description ) VALUES ( 'm2336005', 'Rapdimplanor', 185, 'Dog', 'heart medication');
 INSERT INTO group_7.products( id, product_name, product_price, product_category, product_description ) VALUES ( 'm3096895', 'Aderupavil', 124, 'Dog', 'antibiotic');
@@ -50,4 +50,71 @@ INSERT INTO group_7.products( id, product_name, product_price, product_category,
 INSERT INTO group_7.products( id, product_name, product_price, product_category, product_description ) VALUES ( 't4795236', 'Dopex', 29, 'Dog', 'Bone');
 INSERT INTO group_7.products( id, product_name, product_price, product_category, product_description ) VALUES ( 't3266758', 'Emistor', 44, 'Dog', 'Ball');
 
---
+-- Practice manual entry
+INSERT INTO group_7.practice 
+VALUES ('Connect Veterinary Practice', 0445305532, 'Geldenaaksebaan 335, 3001 Leuven', 'Mon-Fri 9:00-12:00 & 13:00-18:00');
+
+-- Rooms made with dbschema
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '012', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '011', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '002', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '014', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '013', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '004', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '005', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '001', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '003', 'Connect Veterinary Practice');
+INSERT INTO group_7.room( id, practice_name ) VALUES ( '015', 'Connect Veterinary Practice');
+
+-- Time Slot made with ai
+INSERT INTO group_7.time_slot (id, "end", on_call) VALUES
+('2025-01-06 09:00', '10:00', FALSE),
+('2025-01-06 10:00', '11:00', FALSE),
+('2025-01-06 14:00', '15:00', FALSE),
+('2025-01-07 09:00', '10:00', FALSE),
+('2025-01-07 16:00', '17:00', FALSE),
+('2025-01-08 15:00', '16:00', FALSE),
+('2025-01-09 13:00', '14:00', FALSE),
+('2025-01-10 11:00', '12:00', FALSE),
+('2025-01-11 09:00', '10:00', TRUE),
+('2025-01-12 14:00', '15:00', TRUE),
+('2025-01-13 09:00', '10:00', FALSE),
+('2025-01-13 10:00', '11:00', FALSE),
+('2025-01-14 18:00', '19:00', TRUE),
+('2025-01-14 17:00', '18:00', FALSE),
+('2025-01-15 09:00', '10:00', FALSE),
+('2025-01-15 14:00', '15:00', FALSE),
+('2025-01-16 08:00', '09:00', TRUE),
+('2025-01-16 09:00', '10:00', FALSE),
+('2025-01-17 10:00', '11:00', FALSE),
+('2025-01-18 16:00', '17:00', TRUE),
+('2025-02-03 09:00', '10:00', FALSE),
+('2025-02-03 14:00', '15:00', FALSE),
+('2025-02-04 10:00', '11:00', FALSE),
+('2025-02-04 15:00', '16:00', FALSE),
+('2025-02-05 09:00', '10:00', FALSE),
+('2025-02-05 13:00', '14:00', FALSE),
+('2025-02-06 11:00', '12:00', FALSE),
+('2025-02-06 16:00', '17:00', FALSE),
+('2025-02-07 19:00', '20:00', TRUE),
+('2025-02-08 13:00', '14:00', TRUE),
+('2025-02-10 09:00', '10:00', FALSE),
+('2025-02-10 10:00', '11:00', FALSE),
+('2025-02-11 14:00', '15:00', FALSE),
+('2025-02-11 17:00', '18:00', FALSE),
+('2025-02-12 09:00', '10:00', FALSE),
+('2025-02-12 15:00', '16:00', FALSE),
+('2025-02-13 08:00', '09:00', TRUE),
+('2025-02-13 13:00', '14:00', FALSE),
+('2025-02-14 11:00', '12:00', FALSE),
+('2025-02-15 20:00', '21:00', TRUE),
+('2025-03-03 09:00', '10:00', FALSE),
+('2025-03-03 14:00', '15:00', FALSE),
+('2025-03-04 10:00', '11:00', FALSE),
+('2025-03-04 16:00', '17:00', FALSE),
+('2025-03-05 09:00', '10:00', FALSE),
+('2025-03-05 13:00', '14:00', FALSE),
+('2025-03-06 11:00', '12:00', FALSE),
+('2025-03-06 15:00', '16:00', FALSE),
+('2025-03-07 09:00', '10:00', FALSE),
+('2025-03-08 12:00', '13:00', TRUE);
