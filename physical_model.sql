@@ -36,8 +36,8 @@ CREATE  TABLE group_7.products (
 	id                   char(8)  NOT NULL  ,
 	product_name         varchar(100)  NOT NULL  ,
 	product_price        integer  NOT NULL  ,
-	product_category     varchar(100)    ,
-	product_description  varchar(100)    ,
+	product_category     varchar(100) NOT NULL,
+	product_description  varchar(100) NOT NULL,
 	CONSTRAINT pk_products PRIMARY KEY ( id )
  );
 
