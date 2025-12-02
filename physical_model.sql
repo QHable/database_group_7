@@ -1,9 +1,10 @@
 CREATE  TABLE group_7.client ( 
 	id                   char(8)  NOT NULL  ,
 	address              varchar(100)  NOT NULL  ,
-	phone_number         integer  NOT NULL  ,
+	phone_number         char(10)  NOT NULL  ,
 	CONSTRAINT pk_client PRIMARY KEY ( id )
  );
+
 
 CREATE  TABLE group_7.email ( 
 	client_id            char(8)  NOT NULL  ,
