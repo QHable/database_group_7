@@ -486,3 +486,5 @@ INSERT INTO group_7.email (client_id, email) VALUES ('00000040', 'leo.bailey@gma
 INSERT INTO group_7.email (client_id, email) VALUES ('00000041', 'nora.rivera@hotmail.be');
 INSERT INTO group_7.email (client_id, email) VALUES ('00000042', 'michael.cooper@yahoo.com');
 INSERT INTO group_7.email (client_id, email) VALUES ('00000043', 'lila.richardson@gmail.com');
+
+--appointment table 

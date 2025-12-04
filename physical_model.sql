@@ -43,7 +43,7 @@ CREATE  TABLE group_7.products (
  );
 
 CREATE  TABLE group_7.room ( 
-	id                   integer  NOT NULL  ,
+	id                   char(3)  NOT NULL  ,
 	practice_name        varchar(100)  NOT NULL  ,
 	CONSTRAINT pk_room PRIMARY KEY ( id ),
 	CONSTRAINT fk_practice FOREIGN KEY ( practice_name ) REFERENCES group_7.practice( id )   
@@ -85,7 +85,7 @@ CREATE  TABLE group_7.appointment (
 	appointment_cost     smallint  NOT NULL  ,
 	follow_up_of         char(10)    ,
 	patient_id           char(8)  NOT NULL  ,
-	room_number          integer  NOT NULL  ,
+	room_number          char(3)  NOT NULL  ,
 	CONSTRAINT pk_appointment PRIMARY KEY ( id ),
 	CONSTRAINT appointment_id FOREIGN KEY ( follow_up_of ) REFERENCES group_7.appointment( id )   ,
 	CONSTRAINT patient_id FOREIGN KEY ( patient_id ) REFERENCES group_7.patient( id )   ,
