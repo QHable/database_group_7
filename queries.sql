@@ -5,7 +5,7 @@ SELECT
 	(ap.appointment_cost + (pre.prescription_amount * pro.product_price)) AS "money earnd" 
 FROM group_7.appointment ap 
 	LEFT JOIN group_7.prescribes pre ON (ap.id = pre.appointment_id) 
-	INNER JOIN group_7.products pro ON (pre.product_id = pro.id) 
+	LEFT JOIN group_7.products pro ON (pre.product_id = pro.id) 
 WHERE EXTRACT(year from ap.appointment_date) = '2025' 
 	AND EXTRACT(month from ap.appointment_date) = '01' 
 ORDER BY ap.appointment_date, ap.start_time;
