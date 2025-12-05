@@ -1,8 +1,11 @@
 -- revenue in specific month
 SELECT 
 	'appointment' AS "type", 
-	ap.id, ap.appointment_date AS "date", 
-	(ap.appointment_cost + (pre.prescription_amount * pro.product_price)) AS "money earnd" 
+	ap.id, ap.appointment_date AS "date",
+	CASE
+		WHEN pre.prescription_amount IS NULL THEN ap.appointment_cost
+		ELSE (ap.appointment_cost + (pre.prescription_amount * pro.product_price)) 
+	END AS "money earnd" 
 FROM group_7.appointment ap 
 	LEFT JOIN group_7.prescribes pre ON (ap.id = pre.appointment_id) 
 	LEFT JOIN group_7.products pro ON (pre.product_id = pro.id) 
