@@ -51,3 +51,15 @@ GROUP BY p.animal_species, p.animal_breed
 HAVING lower(p.animal_species) = 'dog'
 ORDER BY no_appointments DESC;
 
+
+-- week overvieuw for workers
+SELECT app.appointment_date, wo.employee_name, room.id as "room", (app.start_time || '-'|| app.end_time) as "time", app.appointment_type, app.description, app.patient_id as "patient", app.id 
+FROM group_7.appointment app
+LEFT JOIN group_7.vet_has_appointment  vet_app ON (app.id = vet_app.appointment_id)
+LEFT JOIN group_7.animal_carer_has_appointment an_app ON(app.id = an_app.appointment_id)
+INNER JOIN group_7.worker wo ON (vet_app.worker_id = wo.id or an_app.worker_id = wo.id)
+LEFT JOIN group_7.room ON (app.room_number = room.id)
+
+WHERE  EXTRACT(year from app.appointment_date) = '2025' AND EXTRACT(month from app.appointment_date) = '01' 
+AND EXTRACT(day from app.appointment_date) IN ('06', '07', '08', '09', '10', '11', '12')
+ORDER BY app.appointment_date, wo.id, app.start_time;
