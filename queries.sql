@@ -29,6 +29,25 @@ LIMIT 10;
 
 -- overview for specific animal's appointments 
 
+
 -- top performer through metric of number of apppointments
+-- currently shows lowest performer, highest is made by changing order by to desc
+SELECT w.employee_name, COUNT(v.worker_id) AS no_appointments
+FROM group_7.appointment AS a
+	INNER JOIN group_7.vet_has_appointment AS v
+	ON v.appointment_id = a.id
+	INNER JOIN group_7.worker AS w
+	ON w.id = v.worker_id
+GROUP BY w.id
+ORDER BY no_appointments
+LIMIT 1;
 
 -- percentage of animals in practice / breed 
+SELECT p.animal_breed, COUNT(p.animal_species) AS no_appointments
+FROM group_7.appointment AS a
+	INNER JOIN group_7.patient AS p
+	ON a.patient_id = p.id
+GROUP BY p.animal_species, p.animal_breed
+HAVING lower(p.animal_species) = 'dog'
+ORDER BY no_appointments DESC;
+
