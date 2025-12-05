@@ -712,27 +712,68 @@ INSERT INTO group_7.appointment( id, appointment_date, description, start_time, 
 INSERT INTO group_7.appointment( id, appointment_date, description, start_time, end_time, results, appointment_type, appointment_cost, follow_up_of, patient_id, room_number ) VALUES ( 'A000000030', '2025-01-11', 'Routine adult booster', '15:00:00', '15:20:00', null, 'Vaccine', 40, null, '00000025', '015');
 
 -- prescribes
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm5317269', '00000001', '2025-01-12', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm2336005', '00000002', '2025-01-15', 2);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm3096895', '00000003', '2025-01-18', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm4795236', '00000004', '2025-01-20', 3);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm3266758', '00000005', '2025-01-22', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm5032142', '00000006', '2025-01-25', 2);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm6047660', '00000007', '2025-01-26', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm3412836', '00000008', '2025-01-27', 4);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm1465537', '00000009', '2025-01-30', 2);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'm1043663', '00000010', '2025-02-01', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'f5317269', '00000011', '2025-02-03', 3);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'f2336005', '00000012', '2025-02-05', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'f3096895', '00000013', '2025-02-07', 2);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'f4795236', '00000014', '2025-02-08', 6);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'f3266758', '00000015', '2025-02-10', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'g5317269', '00000016', '2025-02-11', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'g2336005', '00000017', '2025-02-13', 2);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'g3096895', '00000018', '2025-02-14', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'g4795236', '00000019', '2025-02-16', 1);
-INSERT INTO group_7.client_orders_product( product_id, client_id, order_date, order_amount ) VALUES ( 'g3266758', '00000020', '2025-02-18', 3);
+INSERT INTO group_7.prescribes
+(product_id, appointment_id, prescription_duration, prescription_amount)
+VALUES
+('m5317269', 'A000000026', '7 days', 14),
+('m2336005', 'A000000027', '14 days', 28),
+('m3096895', 'A000000028', '10 days', 20),
+('m4795236', 'A000000029', '21 days', 21),
+('m3266758', 'A000000030', '30 days', 30),
 
+('m5032142', 'A000000031', '14 days', 28),
+('m6047660', 'A000000032', '5 days', 10),
+('m3412836', 'A000000033', '10 days', 20),
+('m1465537', 'A000000034', '7 days', 14),
+('m1043663', 'A000000035', '3 days', 6),
+
+('m7227887', 'A000000036', '21 days', 21),
+('m3387519', 'A000000037', '14 days', 28),
+('m2423522', 'A000000038', '10 days', 20),
+('m7745135', 'A000000039', '7 days', 14),
+('m1723362', 'A000000040', '30 days', 60),
+
+('m8800660', 'A000000041', '5 days', 10),
+('m8639347', 'A000000042', '14 days', 28),
+('m4826505', 'A000000043', '21 days', 21),
+('m7702065', 'A000000044', '30 days', 30),
+('m3244116', 'A000000045', '10 days', 20),
+
+('m6877298', 'A000000046', '14 days', 28),
+('m0052363', 'A000000047', '21 days', 21),
+('m7698388', 'A000000048', '7 days', 14),
+('m5412208', 'A000000049', '30 days', 60),
+('m5834759', 'A000000050', '10 days', 20),
+
+('m5317269', 'A000000051', '5 days', 10),
+('m2336005', 'A000000052', '21 days', 21),
+('m3096895', 'A000000053', '14 days', 28),
+('m4795236', 'A000000054', '7 days', 14),
+('m3266758', 'A000000055', '10 days', 20),
+
+('m5032142', 'A000000056', '30 days', 60),
+('m6047660', 'A000000057', '3 days', 6),
+('m3412836', 'A000000058', '14 days', 28),
+('m1465537', 'A000000059', '21 days', 21),
+('m1043663', 'A000000060', '5 days', 10),
+
+('m7227887', 'A000000061', '14 days', 28),
+('m3387519', 'A000000062', '30 days', 30),
+('m2423522', 'A000000063', '7 days', 14),
+('m7745135', 'A000000064', '10 days', 20),
+('m1723362', 'A000000065', '21 days', 21),
+
+('m8800660', 'A000000066', '7 days', 14),
+('m8639347', 'A000000067', '30 days', 60),
+('m4826505', 'A000000068', '10 days', 20),
+('m7702065', 'A000000069', '14 days', 28),
+('m3244116', 'A000000070', '5 days', 10),
+
+('m6877298', 'A000000071', '21 days', 21),
+('m0052363', 'A000000072', '14 days', 28),
+('m7698388', 'A000000073', '10 days', 20),
+('m5412208', 'A000000074', '7 days', 14),
+('m5834759', 'A000000075', '21 days', 21);
 -- workers
 INSERT INTO group_7.worker( id, employee_name, employee_address, phone_number, employee_roll, practice_name ) VALUES ( 'v0000001', 'Abel', '30 North White Second Freeway', 1569933745, 'Rudi loves flowers. I loves flowers. ', 'Connect Veterinary Practice');
 INSERT INTO group_7.worker( id, employee_name, employee_address, phone_number, employee_roll, practice_name ) VALUES ( 'a0000002', 'Erick', '150 West Rocky Fabien Road', 152454233, 'I loves flowers. Rudi watches football. ', 'Connect Veterinary Practice');

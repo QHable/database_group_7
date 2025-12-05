@@ -1,3 +1,5 @@
+CREATE SCHEMA group_7;
+
 CREATE  TABLE group_7.client ( 
 	id                   char(8)  NOT NULL  ,
 	address              varchar(100)  NOT NULL  ,
