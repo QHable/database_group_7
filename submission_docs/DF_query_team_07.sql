@@ -23,8 +23,6 @@ WHERE EXTRACT(year from c_or_p.order_date) = '2025'
 ORDER BY date;
 
 -- most popular products:
---  Useful for practice to identify which products to keep stocked/which areas they may want to expand product selection
-
 SELECT p.product_name || ': ' || p.product_category AS product, 
 	SUM(cop.order_amount) AS amount_ordered
 FROM group_7.client_orders_product as cop
@@ -35,7 +33,6 @@ ORDER BY amount_ordered DESC
 LIMIT 10;
 
 -- top performer through metric of number of apppointments
--- currently shows lowest performer, highest is made by changing order by to desc
 SELECT w.employee_name, 
 	COUNT(v.worker_id) AS no_appointments
 FROM group_7.appointment AS a
